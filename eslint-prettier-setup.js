@@ -4,6 +4,11 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+//eslint require package.json in other to init
+if (!fs.existsSync(path.join(__dirname, "package.json"))) {
+  throw Error("A package.json file is necessary to initialize ESLint. Run `npm init` to create a package.json file and try again.")
+}
+
 // Function to execute commands
 const executeCommand = (command) => {
   try {
