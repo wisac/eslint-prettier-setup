@@ -1,5 +1,6 @@
 node_modules
 test.js
-package.json
-package-lock.json
-.*
+.vscode
+testing
+.eslintrc.js
+.prettierrc
