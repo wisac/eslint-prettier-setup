@@ -47,7 +47,27 @@ eslint-prettier-setup
 
 ### Configuration
 
-The script uses the ESLint config wizard to set up ESLint. You can customize ESLint rules by modifying the generated .eslintrc.js or .eslintrc.json and .prettierrc files
+The script uses the ESLint config wizard to set up ESLint. You can customize ESLint rules by modifying the generated .eslintrc.js or .eslintrc.json and .prettierrc files.
+- NB: If you do not want eslint to flag bad code formatting as errors, in .eslintrc file, set **prettier/prettier** rule to **off** or **warn**
+
+**Example configuation**
+- .prettierrc configuraion
+```bash
+ {
+  "printWidth": 100,
+  "semi": false,
+  "singleQuote": false,
+  "trailingComma": "all"
+}
+```
+- .eslintrc.json configuration
+```bash
+"rules": {
+    "prettier/prettier": "off"
+    "no-unused-vars": "error",
+    "no-console": "off",
+}
+  ``````
 
 ### Note on Cross-Platform Compatibility:
 
